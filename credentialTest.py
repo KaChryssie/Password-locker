@@ -3,6 +3,14 @@ from credential import Credential #importing the credential class
 
 
 class TestCredential(unittest.TestCase):
+    '''
+    Test class that defines text cases for the credential class behaviour
+    
+    Args:
+        unittest.TestCase: TextCase that helps creating text cases
+    '''
+    
+
     def setUp(self):
        
         self.new_credential = Credential("Alvin","Twitter","123456") # create credential object
