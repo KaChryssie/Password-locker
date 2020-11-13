@@ -34,16 +34,26 @@ class Credential:
 
 
     @classmethod
-   
+    def credential_exist(cls,name):
 
-    @classmethod
-    def display_credential(cls):  
         '''
-        method that returns credentials list
+       Method that checks if a credential exist from the credential list.
+       
+       Args:
+            name: name to search if it exists
+        Returns:
+            Boolean: True or false depending if the credential exists.
+            
         '''
        
-        return cls.credential_list
-    
+        for credential in cls.credential_list:
+            if credential.account_name == name:
+                    return True
+
+        return False
+
+    @classmethod
+   
     def delete_credential(self):
 
         '''
