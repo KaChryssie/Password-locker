@@ -57,7 +57,7 @@ class TestCredential(unittest.TestCase):
 
     def test_delete_credential(self):
             '''
-            to delete credentials
+            to delete credential in tthe credential list
             '''
             self.new_credential.save_credential()
             test_credential = Credential("Test","user") 
