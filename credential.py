@@ -53,18 +53,14 @@ class Credential:
         return False
 
     @classmethod
-   
-    def delete_credential(self):
-
+    def display_credential(cls):  
         '''
-        delete credential method delete saved credential objects from credential list.
+        method that returns credentials list
         '''
-
-
-      
-
-        Credential.credential_list.remove(self)
-
+       
+        return cls.credential_list
+    
+    
 
     def __init__(self,account_name,username,password):
         '''
