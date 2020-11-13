@@ -1,5 +1,5 @@
 import unittest #importing the unittest module
-from credential import Credential
+from credential import Credential #importing the credential class
 
 
 class TestCredential(unittest.TestCase):
