@@ -31,9 +31,9 @@ class TestCredential(unittest.TestCase):
         
 
     def test_save_credential(self):
-       '''
-       test to check if the credential object is saved in the credential list
-       '''
+        '''
+        test to check if the credential object is saved in the credential list
+        '''
         self.new_credential.save_credential() # saving the new account
         self.assertEqual(len(Credential.credential_list),1)  
 
@@ -50,7 +50,7 @@ class TestCredential(unittest.TestCase):
             test to check if we can save multiple credential in the credential list
             '''
             self.new_credential.save_credential()
-            test_credential = Credential("Test","user") 
+            test_credential = Credential("Test","user","123457") 
             test_credential.save_credential()
             self.assertEqual(len(Credential.credential_list),2)
 
@@ -60,24 +60,24 @@ class TestCredential(unittest.TestCase):
             to delete credential in tthe credential list
             '''
             self.new_credential.save_credential()
-            test_credential = Credential("Test","user") 
+            test_credential = Credential("Test","user","123457") 
             test_credential.save_credential()
 
             self.new_credential.delete_credential()
             self.assertEqual(len(Credential.credential_list),1) 
 
     def test_find_credential_by_credential_name(self):
-       '''
-       to find credential by credential name
-       '''
+        '''
+        to find credential by credential name
+        '''
 
         self.new_credential.save_credential()
-        test_credential = Credential("Test","user") 
+        test_credential = Credential("Test","user","123457") 
         test_credential.save_credential()
 
         found_credential = Credential.find_by_name("Test")
 
-        self.assertEqual(found_credential.username,test_credential.username)  
+        self.assertEqual(found_credential,Credential.find_by_name("Test"))  
 
 
 
@@ -87,11 +87,18 @@ class TestCredential(unittest.TestCase):
         '''
 
         self.new_credential.save_credential()
-        test_credential = Credential("Test","user") # new account
+        test_credential = Credential("Test","user","123457") # new account
         test_credential.save_credential()
 
-        credential_exists = Credential.credential_exist("Alvin")
+        credential_exists = Credential.credential_exist("Twitter")
         self.assertTrue(credential_exists)    
+    
+    def test_display_credential(self):
+        '''
+        method that returns a list of all credential saved
+        '''
+
+        self.assertEqual(Credential.display_credential(),Credential.credential_list)
         
                        
 
