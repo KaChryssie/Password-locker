@@ -1,7 +1,10 @@
 class Credential:
-  
+    """
+    Class that generates new instances of users.
+    """
+    credential_list = [] #empty credential list
 
-
+    
     
     @classmethod
     def find_by_name(cls,name):
