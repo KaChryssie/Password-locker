@@ -40,7 +40,7 @@ class TestCredential(unittest.TestCase):
 
     def tearDown(self):
             '''
-            test to clean up the credential list in the credential.py
+            test to clean up after each test run
             '''
             Credential.credential_list = []    
 
