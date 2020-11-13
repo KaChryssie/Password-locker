@@ -47,7 +47,7 @@ class TestCredential(unittest.TestCase):
 
     def test_save_multiple_credential(self):
             '''
-            test to check save multiple credentials
+            test to check if we can save multiple credential in the credential list
             '''
             self.new_credential.save_credential()
             test_credential = Credential("Test","user") 
