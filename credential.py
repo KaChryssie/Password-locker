@@ -17,26 +17,24 @@ class Credential:
 
     
     @classmethod
-    
-
-    @classmethod
-    def credential_exist(cls,name):
+    def find_by_name(cls,name):
 
         '''
-       Method that checks if a credential exist from the credential list.
+       Method that takes in a name returns a credential that matches that name.
        
        Args:
-            name: name to search if it exists
+            name: name to search for
         Returns:
-            Boolean: True or false depending if the credential exists.
+            Credential of the person that matches the name.
             
         '''
-       
         for credential in cls.credential_list:
             if credential.account_name == name:
-                    return True
+                return credential  
 
-        return False
+
+    @classmethod
+   
 
     @classmethod
     def display_credential(cls):  
