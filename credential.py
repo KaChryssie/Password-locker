@@ -4,6 +4,22 @@ class Credential:
     """
     credential_list = [] #empty credential list
 
+    def __init__(self,username,account_name,password):
+        '''
+       _init_method that help us define properties for our objects.
+       
+       Args:
+            account_name:New credention account name.
+            username:New credention username.
+            password:New credential password.
+
+        '''
+        #docstring removed for simplicity
+
+        self.username = username
+        self.account_name = account_name
+        self.password = password
+
     def save_credential(self):
 
         '''
@@ -72,18 +88,4 @@ class Credential:
         Credential.credential_list.remove(self)
 
 
-    def __init__(self,account_name,username,password):
-        '''
-       _init_method that help us define properties for our objects.
-       
-       Args:
-            account_name:New credention account name.
-            username:New credention username.
-            password:New credential password.
-
-        '''
-        #docstring removed for simplicity
-
-        self.username = username
-        self.account_name = account_name
-        self.password = password
+    
