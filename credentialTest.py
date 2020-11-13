@@ -20,6 +20,9 @@ class TestCredential(unittest.TestCase):
 
     
     def test_init(self):
+        '''
+        Test to check if the object is initialized properly
+        '''
         
 
         self.assertEqual(self.new_credential.username,"Alvin")
@@ -29,7 +32,7 @@ class TestCredential(unittest.TestCase):
 
     def test_save_credential(self):
        '''
-       test to save the credentials
+       test to check if the credential object is saved in the credential list
        '''
         self.new_credential.save_credential() # saving the new account
         self.assertEqual(len(Credential.credential_list),1)  
@@ -44,7 +47,7 @@ class TestCredential(unittest.TestCase):
 
     def test_save_multiple_credential(self):
             '''
-            to save multiple credentials
+            test to check save multiple credentials
             '''
             self.new_credential.save_credential()
             test_credential = Credential("Test","user") 
