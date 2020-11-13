@@ -9,9 +9,12 @@ class TestCredential(unittest.TestCase):
     Args:
         unittest.TestCase: TextCase that helps creating text cases
     '''
-    
+
 
     def setUp(self):
+        '''
+        Set up method that run before each test cases
+        '''
        
         self.new_credential = Credential("Alvin","Twitter","123456") # create credential object
 
