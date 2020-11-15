@@ -1,7 +1,7 @@
 
 # Password Locker
 
-## Built By [KaChryssie](https://github.com/KaChryssie/)
+ Built By [KaChryssie](https://github.com/KaChryssie/)
 
 ## Description
 This is a python terminal application that allow users to create and save password for different accounts.
