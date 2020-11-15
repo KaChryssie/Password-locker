@@ -16,8 +16,8 @@ As a user I would like:
 
 
 
-## SetUp / Installation Requirements
-### Prerequisites
+
+## Setup/Installation requirements
 * python3.6
 
 
